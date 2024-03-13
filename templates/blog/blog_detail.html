@@ -1,0 +1,73 @@
+{% extends 'base1.html' %}
+
+{% block contents %}
+{% load static %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url({% static 'assets/img/home-bg.jpg' %})">
+</header>
+
+<section class="detail-container m-6 space-y-4">
+
+    <img src="{{ post.thumbnail_image.url }}" alt="{{ post.title }}" width="640" height="360">
+
+    <div id="map" style="width:500px;height:400px;"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8b97026d796540a3b48385c2491a210c"></script>
+    <script>
+	    var container = document.getElementById('map');
+	    var options = {
+		center: new kakao.maps.LatLng(37.2939104, 127.2025664),
+		level: 3
+	    };
+
+	    var map = new kakao.maps.Map(container, options);
+    </script>
+
+    <h2 class="font-bold text-xl">{{ post.title }}</h2>
+    <p>{{ post.author }}</p>
+    <div class="bg-gray-200 p-4 rounded-lg text-sm">
+        <p>조회수 {{ post.view_count }}회 · {{ post.created_at|timesince }} 전</p>
+        {{ post.content|linebreaks }}
+    </div>
+
+    {% for tag in post.tags.all %}
+        <a class="text-blue-600" href="/blog/tag/{{ tag.name }}">#{{ tag.name }}</a>
+    {% endfor %}
+
+    <!-- 로그인을 했고, 내가 이 글에 글쓴이라고 한다면 삭제와 업데이트 버튼 노출 -->
+    {% if user.is_authenticated and user == post.author %}
+    <div class="flex gap-4">
+        <a class="border border-gray-200 p-2 rounded-lg" href="{% url 'blog_update' post.pk %}">수정</a>
+        <form class="border border-gray-200 p-2 rounded-lg" action="{% url 'blog_delete' post.pk %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="삭제">
+        </form>
+    </div>
+    {% endif %}
+
+    <p class="font-bold text-xl">댓글 {{ post.comments.count }}개</p>
+    <form action="" method="post" class="flex p-4 space-y-4 space-x-2 bg-white shadow-md rounded-lg">
+        {% csrf_token %}
+        <div class="flex w-20 items-center justify-center">
+            <label for="id_message" class="text-sm font-medium text-gray-700 text-center">뎃글 작성:</label>
+        </div>
+        
+        <textarea name="message" cols="40" required="" id="id_message" class="mt-1 block w-3/4 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+        <input type="submit" value="작성" class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+    </form>
+    
+    {% for comment in post.comments.all %}
+        <div class="border border-gray-200 p-4 rounded-lg">
+            <p><span class="font-bold">{{ comment.author }}</span> · {{ comment.created_at|timesince }} 전</p>
+            <p>{{ comment.message }}</p>
+            {% if user.is_authenticated and user == comment.author %}
+            <div class="flex gap-4">
+                <form class="" action="{% url 'blog_comment_delete' comment.pk %}" method="post">
+                    {% csrf_token %}
+                    <input class="text-gray-500 hover:text-gray-800 text-sm" type="submit" value="삭제">
+                </form>
+            </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}
