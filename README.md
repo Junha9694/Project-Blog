@@ -182,8 +182,9 @@ gantt
             </td>
             <td>
                 <ul>
-                    <li>블로그</li> 
+                    <li>로그인 안되어있을때</li>
+                    <li>로그인 및 회원가입창</li>      
                 </ul>
             </td>
         </tr>
-    </table>       
+    </table>     
