@@ -79,6 +79,7 @@ gantt
 ### EDR
 
 ### 와이어프레임
+
     <table>
         <tr>
             <th>메인화면</th>
