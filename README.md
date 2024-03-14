@@ -153,7 +153,8 @@ gantt
     </table>
 
 
-    실제구현
+
+실제구현
     <table>
         <tr>
             <th>메인화면</th>
