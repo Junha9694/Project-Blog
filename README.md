@@ -37,6 +37,7 @@ gantt
     index.html 개발    :done,    des1, 2024-03-07, 5d
     blog.html 개발     :done,    des1, 2024-03-07, 5d
     accounts.html 개발     :done,    des1, 2024-03-07, 5d
+    CRUD 구현     :done,    des1, 2024-03-10, 3d
 
     section 테스트
     기능테스트         :done,    des1, 2024-03-10, 4d
