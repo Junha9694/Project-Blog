@@ -88,7 +88,7 @@ gantt
         </tr>
         <tr width="70%">
             <td width="70%">
-                <img src="image/메인.JPG">
+                <img src="image/1.JPG">
             </td>
             <td>
                 <ul>
@@ -105,7 +105,7 @@ gantt
         </tr>
         <tr>
             <td width="70%">
-                <img src="image/로그인 안되어있을때.JPG">
+                <img src="image/2.JPG">
             </td>
             <td>
                 <ul>
@@ -151,3 +151,39 @@ gantt
             </td>
         </tr>
     </table>
+
+
+    실제구현
+    <table>
+        <tr>
+            <th>메인화면</th>
+            <th>설명</th>
+        </tr>
+        <tr width="70%">
+            <td width="70%">
+                <img src="image/1.JPG">
+            </td>
+            <td>
+                <ul>
+                    <li>메인화면</li>
+                    <li>사진 및 리스트</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>로그인 안되어 있을때</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td width="70%">
+                <img src="image/2.JPG">
+            </td>
+            <td>
+                <ul>
+                    <li>블로그</li> 
+                </ul>
+            </td>
+        </tr>
+    </table>       
