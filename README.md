@@ -17,6 +17,8 @@
 ## 2. 개발 프로그래밍 및 배포 URL
 ### 2.1 개발 프로그래밍
 - Django 5.0.2 (Python 3.12.1)
+- Pillow
+- Django-tailwind
 
 
 
