@@ -88,7 +88,7 @@ gantt
         </tr>
         <tr width="70%">
             <td width="70%">
-                <img src="image/1.JPG">
+                <img src="image/메인.JPG">
             </td>
             <td>
                 <ul>
@@ -105,7 +105,7 @@ gantt
         </tr>
         <tr>
             <td width="70%">
-                <img src="image/2.JPG">
+                <img src="image/로그인 안되어있을때.JPG">
             </td>
             <td>
                 <ul>
