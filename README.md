@@ -45,6 +45,72 @@ gantt
     기능테스트         :done,    des1, 2024-03-10, 4d
     시스템베포         :done,    des1, 2024-03-10, 4d
 ```
+```
+📦accounts
+ ┣ 📜admin.py
+ ┣ 📜apps.py
+ ┣ 📜context_processors.py
+ ┣ 📜forms.py
+ ┣ 📜mixins.py
+ ┣ 📜models.py
+ ┣ 📜tests.py
+ ┣ 📜urls.py
+ ┣ 📜views.py
+ ┗ 📜__init__.py
+ 📦blog
+ ┣ 📜admin.py
+ ┣ 📜apps.py
+ ┣ 📜forms.py
+ ┣ 📜lookups.py
+ ┣ 📜mixins.py
+ ┣ 📜models.py
+ ┣ 📜signals.py
+ ┣ 📜tests.py
+ ┣ 📜urls.py
+ ┣ 📜views.py
+ ┗ 📜__init__.py
+ 📦config
+ ┣ 📜asgi.py
+ ┣ 📜settings.py
+ ┣ 📜test_settings.py
+ ┣ 📜urls.py
+ ┣ 📜wsgi.py
+ ┗ 📜__init__.py
+ 📦main
+ ┣ 📜admin.py
+ ┣ 📜apps.py
+ ┣ 📜mixins.py
+ ┣ 📜models.py
+ ┣ 📜tests.py
+ ┣ 📜urls.py
+ ┣ 📜utils.py
+ ┣ 📜views.py
+ ┗ 📜__init__.py
+ 📦static
+ ┣ 📂css
+ ┃ ┗ 📜styles.css
+ ┣ 📂assets
+ ┃ ┗ 📂images
+ ┗ 📂js
+ ┃ ┗ 📜scripts.js
+📦templates
+ ┣ 📂accounts
+ ┃ ┣ 📜login.html
+ ┃ ┣ 📜profile.html
+ ┃ ┗ 📜singup.html
+ ┣ 📂blog
+ ┃ ┣ 📜blog_create.html
+ ┃ ┣ 📜blog_detail.html
+ ┃ ┣ 📜blog_list.html
+ ┃ ┗ 📜blog_update.html
+ ┣ 📂main
+ ┣ 📜base.html
+ ┗ 📜base1.html
+┣ 📜db.sqlite3
+┣ 📜manage.py
+┣ 📜README.md
+```
+
 
 ### URL 구조(모놀리식)
 - main
