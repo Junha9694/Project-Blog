@@ -241,7 +241,7 @@ gantt
     </table>
     <table>
         <tr>
-            <th>로그인 안되어 있을때</th>
+            <th>블로그</th>
             <th>설명</th>
         </tr>
         <tr>
@@ -250,8 +250,8 @@ gantt
             </td>
             <td>
                 <ul>
-                    <li>로그인 안되어있을때</li>
-                    <li>로그인 및 회원가입창</li>      
+                    <li>블로그</li>
+                    <li></li>      
                 </ul>
             </td>
         </tr>
